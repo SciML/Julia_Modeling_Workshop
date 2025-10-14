@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Modeling Cheatsheet – MATLAB – Scilab - Python – Julia Quick Reference</title>
+    <title>Scientific Modeling Cheatsheet – MATLAB – Python – Julia Quick Reference</title>
     <style>
         * {
             margin: 0;
@@ -1601,7 +1601,8 @@ sol = solve(prob)</code></td>
                     <tr>
                         <td>Stiff solver</td>
                         <td><code>[t, y] = ode15s(@mysys, [0, 20], [1; 0])</code></td>
-                        <td><code>[t, y] = cvode(mysys, [0, 20], [1; 0], method="BDF")</code></td>
+                        <td><code>[t, y] = cvode(mysys, [0, 20], [1; 0], ...
+               method="BDF")</code></td>
                         <td><code>sol = solve_ivp(mysys, [0, 20], [1, 0],
                 method='BDF')</code></td>
                         <td><code>sol = solve(prob, FBDF())</code></td>
@@ -1673,8 +1674,8 @@ y0 = [1; 0; 0];
 [t, y] = ode15s(@rober, [0 1e-5], y0, options)</code></td>
                         <td><code>
 y0 = [1; 0; 0];
-[t,y,info] = ida(#(t,y,yp)-&gt;(M*yp-rober(t, y, yp)), [0 1e-5], ...
-    y0, [0;0;0], calcIc="y0yp0"); </code></td>
+[t,y,info] = ida(#(t,y,yp)-&gt;(M*yp-rober(t, y, yp)), ...
+    [0 1e-5], y0, [0;0;0], calcIc="y0yp0"); </code></td>
                         <td><code># Not possible in SciPy</code></td>
                         <td><code>sol = solve(prob, Rodas5())
 # Automatically detects DAE and uses
@@ -1730,7 +1731,8 @@ prob = DAEProblem(residual!, du0, u0, tspan,
                   guess_y, [], guess_yp, []);
 [t, y] = ode15i(@implicitdae, [0 10], y0, yp0)</code></td>
                         <td><code>
-[t, y] = ida(implicitdae, [0 10], guess_y, guess_yp, calcIc="y0yp0")</code></td>
+[t, y] = ida(implicitdae, [0 10], guess_y, ...
+             guess_yp, calcIc="y0yp0")</code></td>
                         <td><code># Would require Assimulo installation
 # and IDA solver setup</code></td>
                         <td><code>using Sundials
@@ -2993,8 +2995,4 @@ model = complete(model)</code></td>
     </script>
 
 </body></html>
-
-
-
-
 
