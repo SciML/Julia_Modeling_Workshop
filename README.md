@@ -276,3 +276,4 @@ Practice problems based on the UCI Data Science Initiative materials:
 * Rackauckas, C., & Nie, Q. (2017). DifferentialEquations.jl – A Performant and Feature-Rich Ecosystem for Solving Differential Equations in Julia. Journal of Open Research Software.
 * Rackauckas et al. (2020). Universal Differential Equations for Scientific Machine Learning. arXiv:2001.04385
 * Ma, Y. et al. (2021). ModelingToolkit: A Composable Graph Transformation System For Equation-Based Modeling. arXiv:2103.05244
+
