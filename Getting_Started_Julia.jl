@@ -54,7 +54,7 @@ See `juliaup --help` for details.
 Visit [julialang.org/downloads](https://julialang.org/downloads/) and download the binary for your operating system.
 
 ### Bad Option: Install with your package manager
-It is strongly recommended against using your system package manager (apt, homebrew etc) to install julia.
+We strongly recommend against using your system package manager (apt, homebrew etc) to install julia.
 
 
 For various reasons they tend to distribute a version that is either:
@@ -166,7 +166,7 @@ The `Project.toml` specifies dependencies, including version compatibility at a 
 from it Pkg generates a `Manifest.toml` which says exactly what version is being installed -- including of indirect dependencies.
 You may or may not want to version control your `Manifest.toml`.
 
-It is normal to create one julia enviroment per project you are working on, to keep things isolated and manage your dependencies and make sure things stay compatible.
+It is normal to create one julia environment per project you are working on, to keep things isolated and manage your dependencies and make sure things stay compatible.
 (And required to do so if that project is a julia package).
 
 ### Essential Pkg Commands
@@ -180,7 +180,7 @@ It is normal to create one julia enviroment per project you are working on, to k
 - `activate .` - Activate environment in current directory
 - `help` - Show all commands
 
-### Starting/Change Julia to a particular enviroment
+### Starting/Change Julia to a particular environment
 
 #### From commandline
 ```bash
@@ -188,7 +188,7 @@ julia --project="."
 ```
 
 #### With-in Julia REPL:
-As per above for creating an enviroment.
+As per above for creating an environment.
 ```
 activate .
 ```
@@ -209,14 +209,14 @@ with things being automatically installed when you first import them.
 but if you want to use external one, it is as per JuPyTer.
 
 
-## Global Enviroment
+## Global Environment
 
-If you start julia without specifying an enviroment you are placed in the global enviroment.
-Things installed here are available no matter what enviroment you have activated.
+If you start julia without specifying an environment you are placed in the global environment.
+Things installed here are available no matter what environment you have activated.
 
-Its common to install development tools here, like `Pluto`, `IJulia`, `BenchmarkTools` and `Revise`.
+It's common to install development tools here, like `Pluto`, `IJulia`, `BenchmarkTools` and `Revise`.
 
-Its discouraged from installing tools you need for your science her since you want to keep a nice isolated enviroment per project so it is easy to give to others.
+It's discouraged from installing tools you need for your science here since you want to keep a nice isolated environment per project so it is easy to give to others.
 
 """
 
