@@ -455,7 +455,7 @@ BenchmarkTools = "~1.8.0"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.12.4"
+julia_version = "1.12.7"
 manifest_format = "2.0"
 project_hash = "4ceb3e6560d57a4c938e7aac1f17b6b66f7eab1b"
 
@@ -482,7 +482,7 @@ weakdeps = ["Dates", "LinearAlgebra"]
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.3.0+1"
+version = "1.3.1+2"
 
 [[deps.Dates]]
 deps = ["Printf"]
